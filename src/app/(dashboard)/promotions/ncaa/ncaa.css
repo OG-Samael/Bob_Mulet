@@ -1,0 +1,272 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .ncaaContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  /* ── Hero split: Image left / Text right ─────────────── */
+  .ncaaHeroSection {
+    @apply flex flex-col items-center justify-start w-full;
+    padding-block-start: 3rem;
+    padding-block-end: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaHeroSection {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding-inline: 3rem;
+      padding-block-start: 3rem;
+      gap: 4rem;
+    }
+  }
+
+  .ncaaHeroImageBox {
+    @apply relative flex-shrink-0;
+    width: 100%;
+    height: 360px;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaHeroImageBox {
+      width: 520px;
+      height: 420px;
+    }
+  }
+
+  .ncaaHeroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .ncaaHeroText {
+    @apply flex flex-col justify-center items-start px-8;
+    padding-block: 1.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaHeroText {
+      flex: 1;
+      padding-inline: 2rem;
+      padding-block: 4rem;
+    }
+  }
+
+  .ncaaSubHeading {
+    @apply font-semibold tracking-widest mb-3;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .ncaaHeading {
+    @apply font-bold leading-[1.2];
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1199px) {
+    .ncaaHeading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .ncaaHeading {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .ncaaHeading {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* ── Green section: Text left / Image right ─────────── */
+  .ncaaGreenSection {
+    @apply flex flex-col gap-6 rounded-2xl;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+    max-width: 860px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaGreenSection {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 3rem;
+      gap: 3rem;
+    }
+  }
+
+  .ncaaGreenLeft {
+    @apply flex flex-col justify-center;
+    flex: 1;
+  }
+
+  .ncaaGreenHeading {
+    @apply font-bold mb-4;
+    color: white !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .ncaaGreenHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .ncaaGreenText {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  .ncaaGreenImage {
+    @apply relative flex-shrink-0;
+    flex: 1;
+    min-height: 300px;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaGreenImage {
+      min-height: 360px;
+    }
+  }
+
+  .ncaaGreenImg {
+    @apply object-contain;
+  }
+
+  /* ── White section: Text left / Image right ──────────── */
+  .ncaaWhiteSection {
+    @apply flex flex-col gap-6;
+    max-width: 860px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaWhiteSection {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 3rem;
+      gap: 3rem;
+    }
+  }
+
+  .ncaaWhiteLeft {
+    @apply flex flex-col justify-center;
+    flex: 1;
+  }
+
+  .ncaaWhiteSubHeading {
+    @apply font-semibold tracking-widest mb-3;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .ncaaWhiteHeading {
+    @apply font-bold leading-[1.2] mb-4;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .ncaaWhiteHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .ncaaWhiteText {
+    @apply mb-6;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .ncaaWhiteImage {
+    @apply relative flex-shrink-0;
+    flex: 1;
+    min-height: 300px;
+  }
+
+  @media (min-width: 900px) {
+    .ncaaWhiteImage {
+      min-height: 360px;
+    }
+  }
+
+  .ncaaWhiteImg {
+    @apply object-contain;
+  }
+
+  /* ── Green gradient bottom section ─────────────────── */
+  .ncaaGreenBottomSection {
+    @apply flex items-center justify-center w-full px-6 py-16;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+  }
+
+  @media (min-width: 900px) {
+    .ncaaGreenBottomSection {
+      padding-inline: 5rem;
+    }
+  }
+
+  .ncaaGreenBottomCard {
+    @apply flex flex-col items-center rounded-2xl;
+    background-color: white;
+    padding: 3rem 3.5rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 599px) {
+    .ncaaGreenBottomCard {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .ncaaCardSymbol {
+    @apply text-center mb-4;
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .ncaaCardHeading {
+    @apply font-bold mb-3 text-center;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 599px) {
+    .ncaaCardHeading {
+      font-size: 1.2rem;
+    }
+  }
+
+  .ncaaCardText {
+    @apply text-center;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}

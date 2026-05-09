@@ -1,0 +1,144 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .additionalScrollContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .additionalGreenSection {
+    @apply relative w-full;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 70%, #1b5e20 100%);
+  }
+
+  .additionalServiceCard {
+    @apply flex flex-col items-center justify-center text-center rounded-lg shadow-md p-8;
+    background-color: var(--mui-palette-background-paper);
+    min-height: 160px;
+  }
+
+  .additionalServiceIcon {
+    @apply relative mb-4;
+    width: 64px;
+    height: 64px;
+  }
+
+  .additionalServiceGrid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .additionalServiceGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .additionalDeedCard {
+    @apply flex flex-col flex-1 rounded-2xl shadow-md p-8;
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .additionalDeedCards {
+    @apply flex flex-col gap-4;
+  }
+
+  @media (min-width: 900px) {
+    .additionalDeedCards {
+      flex-direction: row;
+    }
+  }
+
+  .additionalDarkSection {
+    @apply py-12 w-full;
+    background-color: #1b5e20;
+    color: white;
+  }
+
+  .additionalLightSection {
+    @apply py-12;
+    background-color: #e8f5e9;
+  }
+
+  .additionalCTACard {
+    @apply flex flex-col items-center text-center rounded-2xl shadow-md mx-auto p-8;
+    background-color: var(--mui-palette-background-paper);
+    max-width: 800px;
+  }
+
+  @media (min-width: 900px) {
+    .additionalCTACard {
+      padding: 4rem;
+    }
+  }
+
+  .additionalIconBox {
+    @apply relative mb-6;
+    width: 80px;
+    height: 80px;
+  }
+
+  .additionalNewsCard {
+    @apply flex flex-col overflow-hidden rounded-2xl;
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .additionalNewsCardImg {
+    @apply relative w-full;
+    height: 240px;
+  }
+
+  .additionalNewsCardBody {
+    @apply flex flex-col flex-1 p-6;
+  }
+
+  .additionalNewsLink {
+    @apply font-bold;
+    color: var(--mui-palette-primary-main);
+    text-decoration: none;
+  }
+
+  .additionalNewsLink:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    .additionalDarkSection .pgCardGrid {
+      @apply flex flex-row flex-nowrap overflow-x-auto scroll-smooth gap-4;
+      scroll-snap-type: x mandatory;
+      padding-block-end: 0.5rem;
+      scrollbar-width: thin;
+      scrollbar-color: #1abc9c transparent;
+    }
+
+    .additionalDarkSection .pgCardGrid::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .additionalDarkSection .pgCardGrid::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .additionalDarkSection .pgCardGrid::-webkit-scrollbar-thumb {
+      background-color: #1abc9c;
+      border-radius: 4px;
+    }
+
+    .additionalNewsCard {
+      @apply flex-none;
+      width: 75vw;
+      max-width: 280px;
+      scroll-snap-align: start;
+    }
+  }
+
+  .additionalDisclaimer {
+    @apply block text-center italic;
+    color: white;
+    opacity: 0.8;
+  }
+}

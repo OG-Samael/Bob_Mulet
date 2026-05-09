@@ -1,0 +1,51 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .clipNotesScrollContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .clipNotesVideoBox {
+    @apply relative w-full overflow-hidden rounded-2xl flex-1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .clipNotesVideoFrame {
+    @apply absolute inset-0 w-full h-full;
+    border: 0;
+  }
+
+  .clipNotesLogoBox {
+    @apply relative w-full mx-auto mb-8;
+    max-width: 600px;
+    height: 200px;
+  }
+
+  .clipNotesLightSection {
+    @apply py-12;
+    background-color: #e8f5e9;
+  }
+
+  .clipNotesCTACard {
+    @apply flex flex-col items-center text-center rounded-2xl shadow-md mx-auto p-8;
+    background-color: var(--mui-palette-background-paper);
+    max-width: 800px;
+  }
+
+  @media (min-width: 900px) {
+    .clipNotesCTACard {
+      padding: 4rem;
+    }
+  }
+
+  .clipNotesIconBox {
+    @apply relative mb-6;
+    width: 80px;
+    height: 80px;
+  }
+}

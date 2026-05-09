@@ -1,0 +1,3 @@
+{
+  "/(dashboard)/products/manage/[categorySlug]/page": "app/(dashboard)/products/manage/[categorySlug]/page.js"
+}

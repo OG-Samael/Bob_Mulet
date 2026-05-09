@@ -1,0 +1,245 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .lookbookScrollContainer {
+    @apply flex flex-col w-full;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .lookbookHero {
+    @apply relative w-full flex items-center overflow-hidden;
+    min-height: 600px;
+  }
+
+  /* On mobile, flip the hero columns so the image is above the white box */
+  .lookbookHero .pgTwoColForward {
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: 900px) {
+    .lookbookHero .pgTwoColForward {
+      flex-direction: row;
+    }
+  }
+
+  .lookbookHeroWhiteBox {
+    @apply flex-1 p-12 rounded-2xl shadow-md;
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .lookbookPrimaryLabel {
+    @apply font-bold mb-2;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .lookbookCardCheckout {
+    @apply font-bold;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .lookbookSectionTitle {
+    @apply font-bold py-8 text-center;
+  }
+
+  /* ── Center intro section ─────────────────────────────── */
+  .lookbookCenterSection {
+    @apply flex flex-col items-center justify-center text-center py-12 px-4;
+  }
+
+  .lookbookCenterIcon {
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+  }
+
+  .lookbookCenterTitle {
+    @apply font-bold mb-4;
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 900px;
+  }
+
+  /* ── Green gradient section ───────────────────────────── */
+  .lookbookGreenSection {
+    @apply relative w-full;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 70%, #1b5e20 100%);
+  }
+
+  .lookbookScrollLabel {
+    @apply font-bold text-left w-full mb-3 mt-6;
+    color: white;
+    padding-inline: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .lookbookWhiteCtaBtn {
+    background-color: white !important;
+    color: var(--mui-palette-primary-main) !important;
+    border-radius: 500px !important;
+  }
+
+  .lookbookWhiteCtaBtn:hover {
+    background-color: #f5f5f5 !important;
+  }
+
+  /* ── Split sections ───────────────────────────────────── */
+  .lookbookSplitSection {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-background-default);
+    justify-content: center;
+  }
+
+  @media (max-width: 899px) {
+    .lookbookSplitSection {
+      @apply flex-col;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  .lookbookSplitSectionReversed {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-action-hover);
+    justify-content: center;
+  }
+
+  @media (max-width: 899px) {
+    .lookbookSplitSectionReversed {
+      @apply flex-col;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  .lookbookSplitImage {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .lookbookSplitImage {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .lookbookSplitImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  .lookbookSplitText {
+    @apply flex flex-col justify-center;
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .lookbookSplitText {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .lookbookSplitTitle {
+    @apply font-bold leading-tight mb-4;
+    color: var(--mui-palette-text-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  @media (max-width: 899px) {
+    .lookbookSplitTitle {
+      font-size: 1.75rem;
+    }
+  }
+
+  .lookbookSplitDescription {
+    @apply mb-6;
+    color: var(--mui-palette-text-primary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  /* ── Tips / news section ──────────────────────────────── */
+  .lookbookTipsSection {
+    @apply py-12 w-full;
+    background-color: #1b5e20;
+    color: white;
+  }
+
+  .lookbookTipsSectionHeading {
+    @apply font-bold text-center mb-8 text-2xl;
+    color: white;
+  }
+
+  .lookbookTipsGrid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .lookbookTipsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .lookbookTipsCard {
+    @apply flex flex-col overflow-hidden rounded-2xl;
+    background-color: var(--mui-palette-background-paper);
+    color: var(--mui-palette-text-primary);
+  }
+
+  .lookbookTipsCardImage {
+    @apply w-full bg-cover bg-center bg-no-repeat;
+    height: 240px;
+  }
+
+  .lookbookTipsCardHeading {
+    @apply font-bold mb-2;
+    padding: 1rem 1rem 0;
+  }
+
+  .lookbookTipsCardText {
+    @apply text-sm leading-relaxed;
+    padding: 0.5rem 1rem;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .lookbookTipsCardLink {
+    @apply font-bold text-sm;
+    padding: 0.75rem 1rem;
+    color: var(--mui-palette-primary-main);
+    text-decoration: none;
+    display: block;
+  }
+
+  .lookbookTipsCardLink:hover {
+    text-decoration: underline;
+  }
+
+  .lookbookAddLink {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+  }
+}
+

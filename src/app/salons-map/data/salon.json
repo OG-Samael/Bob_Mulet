@@ -1,0 +1,11 @@
+[
+    {
+        "id": "salon-1",
+        "name": "Aman's Hair Studio",
+        "address": "Bengaluru, Karnataka",
+        "lat": 12.9957919,
+        "lng": 77.6915302,
+        "image": "/images/salon1.jpg",
+        "waitTime": 12
+    }
+]

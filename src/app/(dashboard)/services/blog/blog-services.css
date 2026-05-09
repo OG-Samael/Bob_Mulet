@@ -1,0 +1,78 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .blogScrollContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .blogHeroTitle {
+    @apply font-bold;
+    color: white;
+    font-size: 3rem;
+  }
+
+  .blogFilterBar {
+    @apply w-full py-4 border-b;
+    background-color: var(--mui-palette-background-paper);
+    border-color: var(--mui-palette-divider);
+  }
+
+  .blogFilterContainer {
+    @apply flex items-center gap-8;
+  }
+
+  .blogFilterLabel {
+    @apply font-bold flex-shrink-0;
+  }
+
+  .blogFilterTabs {
+    @apply flex gap-8 overflow-x-auto;
+    scrollbar-width: none;
+  }
+
+  .blogFilterTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blogCategory {
+    @apply cursor-pointer whitespace-nowrap;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blogCategoryActive {
+    @apply cursor-pointer whitespace-nowrap font-bold;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .blogGridSection {
+    @apply py-12;
+  }
+
+  .blogCardDate {
+    @apply block mb-2;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blogCardTitle {
+    @apply font-bold mb-2;
+  }
+
+  .blogCardDesc {
+    @apply flex-1 mb-4;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blogReadMore {
+    @apply font-bold;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .blogCoverImg {
+    object-fit: cover;
+  }
+}

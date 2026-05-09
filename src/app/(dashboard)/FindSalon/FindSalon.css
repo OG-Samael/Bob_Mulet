@@ -1,0 +1,19 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+.iconSearch {
+  font-size: 1.1rem;
+}
+
+.iconClear {
+  font-size: 1rem;
+}
+
+.iconMapPin {
+  font-size: 2rem;
+  color: var(--mui-palette-primary-main);
+}
+
+.iconClock {
+  margin-inline-end: 4px;
+}

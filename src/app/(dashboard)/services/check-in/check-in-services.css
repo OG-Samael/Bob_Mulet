@@ -1,0 +1,49 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .checkInScrollContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .checkInPrimaryLabel {
+    @apply font-bold mb-2;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .checkInLogoBox {
+    @apply relative mx-auto mb-8;
+    width: 300px;
+    height: 100px;
+  }
+
+  .checkInList {
+    @apply pl-6 mb-8;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .checkInListItem {
+    @apply mb-2;
+  }
+
+  .checkInLightSection {
+    @apply py-12;
+    background-color: #e8f5e9;
+  }
+
+  .checkInCTACard {
+    @apply flex flex-col items-center text-center rounded-2xl shadow-md mx-auto p-8;
+    background-color: var(--mui-palette-background-paper);
+    max-width: 800px;
+  }
+
+  @media (min-width: 900px) {
+    .checkInCTACard {
+      padding: 4rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .root {
+    @apply list-none flex items-center w-full h-full overflow-hidden relative p-0 m-0;
+    flex-wrap: inherit;
+  }
+
+  .li:not(:last-of-type) {
+    margin-inline-end: 4px;
+  }
+}

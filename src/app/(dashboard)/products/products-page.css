@@ -1,0 +1,246 @@
+@import '../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .productsScrollContainer {
+    @apply flex flex-col w-full;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .productsHero {
+    @apply relative w-full flex items-center overflow-hidden;
+    min-height: 600px;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  /* On mobile, flip the hero columns so the image is above the white box */
+  .productsHero .pgTwoColForward,
+  .productsHeroGreen .pgTwoColForward {
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: 900px) {
+    .productsHero .pgTwoColForward,
+    .productsHeroGreen .pgTwoColForward {
+      flex-direction: row;
+    }
+  }
+
+  .productsSectionTitle {
+    @apply text-center mb-16;
+  }
+
+  .productsCatalogBtn {
+    border-radius: 500px !important;
+  }
+
+  .productsHeroGreen {
+    @apply relative w-full flex items-center overflow-hidden;
+    min-height: 600px;
+  }
+
+  .productsHeroWhiteBox {
+    @apply flex-1 p-12 rounded-2xl shadow-md;
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .pgProductBoxGreen {
+    @apply rounded-2xl p-8;
+    background-color: #e8f5e9;
+  }
+
+  @media (min-width: 900px) {
+    .pgProductBoxGreen {
+      padding: 4rem;
+    }
+  }
+
+  .productsSubtitleText {
+    font-size: 1.1rem;
+    color: var(--mui-palette-text-secondary);
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .productsCardLink {
+    @apply font-bold;
+    color: var(--mui-palette-primary-main);
+  }
+
+  /* ── Center intro section ─────────────────────────────── */
+  .productsCenterSection {
+    @apply flex flex-col items-center justify-center text-center py-12 px-4;
+  }
+
+  .productsCenterTitle {
+    @apply font-bold mb-4;
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 900px;
+  }
+
+  /* ── Split sections ───────────────────────────────────── */
+  .productsSplitSection {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-background-default);
+    justify-content: center;
+  }
+
+  @media (max-width: 899px) {
+    .productsSplitSection {
+      @apply flex-col;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  .productsSplitSectionReversed {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-action-hover);
+    justify-content: center;
+  }
+
+  @media (max-width: 899px) {
+    .productsSplitSectionReversed {
+      @apply flex-col;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  .productsSplitImage {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .productsSplitImage {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .productsSplitImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  .productsSplitText {
+    @apply flex flex-col justify-center;
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .productsSplitText {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .productsSplitTitle {
+    @apply font-bold leading-tight mb-4;
+    color: var(--mui-palette-text-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  @media (max-width: 899px) {
+    .productsSplitTitle {
+      font-size: 1.75rem;
+    }
+  }
+
+  .productsSplitDescription {
+    @apply mb-6;
+    color: var(--mui-palette-text-primary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  /* ── Tips / news section ──────────────────────────────── */
+  .productsTipsSection {
+    @apply py-12 w-full;
+    background-color: #1b5e20;
+    color: white;
+  }
+
+  .productsTipsSectionHeading {
+    @apply font-bold text-center mb-8 text-2xl;
+    color: white;
+  }
+
+  .productsTipsGrid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .productsTipsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .productsTipsCard {
+    @apply flex flex-col overflow-hidden rounded-2xl;
+    background-color: var(--mui-palette-background-paper);
+    color: var(--mui-palette-text-primary);
+  }
+
+  .productsTipsCardImage {
+    @apply w-full bg-cover bg-center bg-no-repeat;
+    height: 240px;
+  }
+
+  .productsTipsCardHeading {
+    @apply font-bold mb-2;
+    padding: 1rem 1rem 0;
+  }
+
+  .productsTipsCardText {
+    @apply text-sm leading-relaxed;
+    padding: 0.5rem 1rem;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .productsTipsCardLink {
+    @apply font-bold text-sm;
+    padding: 0.75rem 1rem;
+    color: var(--mui-palette-primary-main);
+    text-decoration: none;
+    display: block;
+  }
+
+  .productsTipsCardLink:hover {
+    text-decoration: underline;
+  }
+
+  .pgProductLink {
+    text-decoration: none;
+    display: block;
+  }
+
+  .pgProductCardImgFill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

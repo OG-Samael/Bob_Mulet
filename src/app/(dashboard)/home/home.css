@@ -1,0 +1,662 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .scrollSnapContainer {
+    @apply h-full w-full overflow-y-auto overflow-x-hidden snap-y snap-mandatory scroll-smooth;
+  }
+
+  @media (max-width: 1024px) {
+    .scrollSnapContainer {
+      scroll-snap-type: none;
+    }
+  }
+
+  .snapSection {
+    @apply min-h-full snap-start snap-always flex flex-col px-6;
+  }
+
+  @media (max-width: 1024px) {
+    .snapSection {
+      min-height: auto;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .snapSection {
+      scroll-snap-align: none;
+      scroll-snap-stop: normal;
+    }
+  }
+
+  .mobileHeroContent {
+    @apply hidden z-[3];
+  }
+
+  .heroSection {
+    @apply relative w-full flex-1 bg-cover bg-center bg-no-repeat flex items-center justify-start overflow-hidden;
+  }
+
+  .heroVideo {
+    @apply absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover -z-10;
+  }
+
+  @media (max-width: 1024px) {
+    .heroSection {
+      flex: none;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .desktopHeroContent {
+      display: none !important;
+    }
+
+    .heroContainer {
+      display: none !important;
+    }
+
+    .mobileHeroContent {
+      @apply flex flex-col items-start justify-center text-left py-6 mt-12;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .heroSection {
+      max-block-size: 80vh;
+    }
+  }
+
+  .heroContainer {
+    @apply relative z-[2] flex items-center justify-start h-full w-full py-4 pl-12;
+  }
+
+  @media (min-width: 900px) {
+    .heroContainer {
+      padding-inline-start: 5rem;
+    }
+  }
+
+  .desktopHeroContent {
+    @apply text-white max-w-[500px] flex flex-col justify-center items-start z-[3];
+  }
+
+  @media (max-width: 699px) {
+    .desktopHeroContent {
+      max-inline-size: 55%;
+      align-items: flex-end;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .desktopHeroContent {
+      max-inline-size: 60%;
+    }
+  }
+
+  .heroTitle {
+    @apply font-bold text-2xl mb-4 leading-[1.2] break-words;
+  }
+
+  @media (min-width: 600px) {
+    .heroTitle {
+      color: white !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .heroTitle {
+      font-size: 1.25rem;
+      margin-block-end: 0.75rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .heroTitle {
+      font-size: 1.375rem;
+      margin-block-end: 0.75rem;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 899px) {
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .heroTitle {
+      font-size: 3.5rem;
+    }
+  }
+
+  .heroDescription {
+    @apply text-sm mb-4 leading-6 break-words;
+  }
+
+  @media (min-width: 600px) {
+    .heroDescription {
+      color: white !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .heroDescription {
+      font-size: 0.75rem;
+      margin-block-end: 0.75rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .heroDescription {
+      font-size: 0.85rem;
+      margin-block-end: 0.75rem;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 899px) {
+    .heroDescription {
+      font-size: 1.125rem;
+      margin-block-end: 1.25rem;
+      line-height: 1.6;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .heroDescription {
+      font-size: 1.25rem;
+      margin-block-end: 1.5rem;
+      line-height: 1.6;
+    }
+  }
+
+  .checkInButton {
+    @apply bg-[#1abc9c] text-white py-2 px-6 text-sm font-semibold rounded-full normal-case border-0 cursor-pointer self-start transition-colors;
+  }
+
+  @media (max-width: 400px) {
+    .checkInButton {
+      padding-block: 6px;
+      padding-inline: 16px;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .checkInButton {
+      padding-block: 12px;
+      padding-inline: 32px;
+      font-size: 1rem;
+    }
+  }
+
+  .checkInButton:hover {
+    background-color: #16a085;
+  }
+
+  .textSection {
+    @apply py-12 flex flex-col items-center justify-center text-center;
+  }
+
+  @media (max-width: 767px) {
+    .textSection {
+      padding-block: 1.5rem;
+    }
+  }
+
+  .sectionTitle {
+    @apply font-bold text-2xl mb-2 leading-[1.2];
+  }
+
+  @media (min-width: 900px) {
+    .sectionTitle {
+      font-size: 2.5rem;
+    }
+  }
+
+  .sectionSubtext {
+    @apply text-base leading-6 max-w-[500px];
+    color: var(--mui-palette-text-primary);
+  }
+
+  .cardsSection {
+    @apply py-12 px-4;
+  }
+
+  @media (max-width: 1024px) {
+    .cardsSection {
+      padding-block: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .cardsSection {
+      padding-block-start: 0;
+    }
+  }
+
+  .cardsContainer {
+    @apply flex gap-6 overflow-x-auto scroll-smooth py-4 px-4 -mx-4 justify-center;
+    scrollbar-width: thin;
+    scrollbar-color: #1abc9c transparent;
+  }
+
+  @media (max-width: 1250px) {
+    .cardsContainer {
+      justify-content: flex-start;
+    }
+  }
+
+  .cardsContainer::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .cardsContainer::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .cardsContainer::-webkit-scrollbar-thumb {
+    background-color: #1abc9c;
+    border-radius: 4px;
+  }
+
+  .card {
+    @apply flex-none basis-[280px] rounded-xl overflow-hidden bg-white cursor-pointer transition;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 1024px) {
+    .card {
+      flex-basis: 220px;
+    }
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .cardImage {
+    @apply w-full h-[300px] bg-[#f0f0f0] bg-cover bg-center;
+  }
+
+  @media (max-width: 1024px) {
+    .cardImage {
+      height: 200px;
+    }
+  }
+
+  .cardContent {
+    @apply p-6 flex flex-col gap-2;
+  }
+
+  @media (max-width: 1024px) {
+    .cardContent {
+      padding: 1rem;
+      gap: 0.25rem;
+    }
+  }
+
+  .cardTitle {
+    @apply text-[#1abc9c] font-semibold uppercase text-xs tracking-[0.5px];
+  }
+
+  .cardSubtitle {
+    @apply text-2xl font-bold leading-[1.2];
+    color: var(--mui-palette-common-black);
+  }
+
+  .showMeLink {
+    @apply text-[#1abc9c] font-semibold text-sm mt-2 transition-colors;
+  }
+
+  .showMeLink:hover {
+    color: #16a085;
+    text-decoration: underline;
+  }
+
+  .scheduleSection {
+    @apply py-12 px-4 flex flex-col items-center justify-center text-center;
+  }
+
+  .scheduleTitle {
+    @apply font-bold text-2xl mb-3 leading-[1.2];
+    color: var(--mui-palette-text-primary);
+  }
+
+  @media (min-width: 900px) {
+    .scheduleTitle {
+      font-size: 2.5rem;
+    }
+  }
+
+  .scheduleSubtext {
+    @apply text-base leading-6 max-w-[600px] font-normal;
+    color: var(--mui-palette-text-primary);
+  }
+
+  .featureCardsSection {
+    @apply py-12 px-4;
+  }
+
+  .featureCardsGrid {
+    @apply flex gap-6 overflow-x-auto scroll-smooth py-4 px-4 -mx-4;
+    scrollbar-width: thin;
+    scrollbar-color: #1abc9c transparent;
+  }
+
+  @media (min-width: 900px) {
+    .featureCardsGrid {
+      justify-content: center;
+      overflow-x: visible;
+    }
+  }
+
+  .featureCardsGrid::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .featureCardsGrid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .featureCardsGrid::-webkit-scrollbar-thumb {
+    background-color: #1abc9c;
+    border-radius: 4px;
+  }
+
+  .featureCard {
+    @apply flex-none basis-[320px] rounded-xl overflow-hidden bg-white transition;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (min-width: 768px) {
+    .featureCard {
+      flex-basis: 400px;
+    }
+  }
+
+  .featureCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .featureCardImage {
+    @apply w-full h-[250px] bg-[#f0f0f0] bg-cover bg-center;
+  }
+
+  .featureCardContent {
+    @apply p-8 flex flex-col gap-4 text-center;
+  }
+
+  .featureCardIcon {
+    @apply w-[60px] h-[60px] bg-[#1abc9c] rounded-full flex items-center justify-center mx-auto text-2xl;
+  }
+
+  .checkmarkIcon {
+    @apply text-white text-2xl font-bold;
+  }
+
+  .noteIcon {
+    @apply text-white text-xl;
+  }
+
+  .featureCardTitle {
+    @apply font-bold text-2xl leading-[1.2] uppercase;
+    color: var(--mui-palette-common-black);
+  }
+
+  .featureCardDescription {
+    @apply text-[0.95rem] leading-6 mb-2;
+    color: var(--mui-palette-common-black);
+  }
+
+  .featureButton {
+    @apply bg-[#1abc9c] text-white py-3 px-8 text-base font-semibold rounded-full normal-case border-0 cursor-pointer transition-colors self-center;
+  }
+
+  .featureButton:hover {
+    background-color: #16a085;
+  }
+
+  .waitingListSection {
+    @apply p-0 rounded-2xl my-auto mx-auto overflow-hidden;
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+    max-width: 1000px;
+    max-height: calc(100vh - 200px);
+  }
+
+  @media (max-width: 599px) {
+    .waitingListSection {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+  .waitingListContent {
+    @apply grid grid-cols-2 gap-0 items-stretch p-0 relative;
+  }
+
+  @media (max-width: 768px) {
+    .waitingListContent {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .waitingListImage {
+    @apply flex items-stretch justify-start w-full relative z-[1];
+    margin-inline-end: -2rem;
+  }
+
+  @media (max-width: 768px) {
+    .waitingListImage {
+      min-height: 300px;
+    }
+  }
+
+  .waitingListImageBackground {
+    @apply bg-cover bg-center bg-no-repeat;
+    width: 120%;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+    background-image: url('/images/salon/GC_8043_BTS_HomePg_BTS_600x388_findyournextgreatcut.jpg');
+  }
+
+  .waitingListForm {
+    @apply flex flex-col gap-3 bg-white rounded-xl p-6 text-black relative z-[2] my-4;
+    margin-inline-end: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .waitingListForm {
+      margin-inline: auto;
+    }
+  }
+
+  .appLabel {
+    @apply text-[#16a085] font-semibold uppercase text-xl tracking-[0.5px] block mb-1;
+  }
+
+  .waitingListTitle {
+    @apply text-2xl font-bold leading-[1.2] text-black mb-2;
+  }
+
+  @media (max-width: 768px) {
+    .waitingListTitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  .waitingListDescription {
+    @apply text-base leading-6 text-black mb-4;
+  }
+
+  .formGroup {
+    @apply flex flex-col gap-1;
+  }
+
+  .formLabel {
+    @apply text-black font-medium text-[0.9rem];
+  }
+
+  .required {
+    @apply text-[#ff6b6b] ml-1;
+  }
+
+  .emailInput {
+    @apply w-full;
+  }
+
+  .emailInput .MuiOutlinedInput-root {
+    @apply rounded-lg bg-white;
+  }
+
+  .emailInput .MuiOutlinedInput-input {
+    @apply px-4 py-3;
+    color: var(--mui-palette-text-primary);
+  }
+
+  .emailInput .MuiOutlinedInput-input::placeholder {
+    color: #999;
+  }
+
+  .emailButton {
+    @apply bg-[#1abc9c] text-white py-3 px-8 text-base font-semibold rounded-full normal-case border-0 cursor-pointer transition-colors w-fit;
+  }
+
+  .emailButton:hover {
+    background-color: rgba(26, 188, 156, 0.8);
+  }
+
+  .successMessage {
+    @apply text-[#c3fae8] font-medium mt-4;
+  }
+
+  .tipsSection {
+    @apply bg-[#f0f0f0] py-6 px-4 rounded-[24px] my-4 mx-auto flex flex-col items-center justify-center;
+    max-height: calc(100vh - 250px);
+    max-width: 800px;
+    width: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .tipsSection {
+      padding: 1.5rem;
+      max-height: calc(100vh - 150px);
+      margin-block: auto;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .tipsSection {
+      padding: 1rem;
+      margin: 0.5rem auto;
+      border-radius: 16px;
+      max-height: none;
+      width: calc(100% - 1rem);
+    }
+  }
+
+  .tipsSectionHeading {
+    @apply font-bold text-black mb-6 text-center text-2xl;
+  }
+
+  @media (max-width: 599px) {
+    .tipsSectionHeading {
+      font-size: 1.25rem;
+      margin-block-end: 0.75rem;
+    }
+  }
+
+  .tipsGrid {
+    @apply grid grid-cols-3 gap-2 h-full items-center;
+  }
+
+  @media (max-width: 1024px) {
+    .tipsGrid {
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .tipsGrid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .tipsCard {
+    @apply flex flex-col items-center text-center p-1;
+  }
+
+  .tipsCardImage {
+    @apply w-full max-w-[200px] aspect-square bg-cover bg-center bg-no-repeat rounded-xl bg-[#e0e0e0] mb-3;
+  }
+
+  @media (max-width: 1024px) {
+    .tipsCardImage {
+      max-width: 140px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .tipsCardImage {
+      max-width: 100px;
+    }
+  }
+
+  .tipsCardHeading {
+    @apply font-semibold mb-1.5 text-black text-base;
+  }
+
+  @media (max-width: 599px) {
+    .tipsCardHeading {
+      font-size: 0.95rem;
+    }
+  }
+
+  .tipsCardText {
+    @apply text-[#666] leading-[1.4] mb-3 text-[0.85rem];
+  }
+
+  @media (max-width: 599px) {
+    .tipsCardText {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tipsCardLink {
+    @apply text-black font-semibold text-[0.9rem] transition-colors;
+  }
+
+  .tipsCardLink:hover {
+    color: #4a4a6a;
+  }
+
+  .footerWrapper {
+    @apply mt-auto py-6 bg-[#1a1a2e];
+  }
+
+  .whiteText {
+    @apply text-white;
+  }
+
+  .cardImageBackground {
+    @apply bg-cover bg-center;
+  }
+
+  .featureCardImageOnline {
+    background-image: url('/images/salon/gc-home-oci-woman-with-phone.png');
+  }
+
+  .featureCardImageClip {
+    background-image: url('/images/salon/gc-home-clipNotes.png');
+  }
+}

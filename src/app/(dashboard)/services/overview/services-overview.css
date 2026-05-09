@@ -1,0 +1,400 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .overviewContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .overviewHeroSection {
+    @apply relative w-full flex items-center justify-center overflow-hidden flex-shrink-0;
+    min-height: 42vh;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewHeroSection {
+      min-height: 42vh;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroSection {
+      min-height: auto;
+      overflow: visible;
+    }
+  }
+
+  .overviewHeroImage {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+  }
+
+  .overviewHeroOverlay {
+    @apply absolute inset-0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+  .overviewHeroContainer {
+    @apply relative z-[2] flex items-center justify-between h-full w-full py-4 px-12;
+    max-width: 1400px;
+    width: 100%;
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-inline: 1rem;
+      padding-block: 1.5rem;
+      gap: 1rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .overviewHeroContainer {
+      padding-inline: 5rem;
+    }
+  }
+
+  .overviewHeroRightImage {
+    @apply flex items-end justify-end flex-shrink-0 self-end;
+    height: 100%;
+    width: auto;
+    margin-inline-start: 2rem;
+  }
+
+  @media (max-width: 1024px) and (min-width: 600px) {
+    .overviewHeroRightImage {
+      max-height: 42vh;
+    }
+  }
+
+  .overviewHeroRightImg {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewHeroRightImg {
+      max-height: 100%;
+      width: auto;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroRightImg {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-position: center bottom;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroRightImage {
+      display: flex;
+      order: -1;
+      width: 100%;
+      justify-content: center;
+      margin-inline-start: 0;
+      height: 220px;
+      flex-shrink: 0;
+    }
+  }
+
+  .overviewHeroContent {
+    @apply flex flex-col justify-center items-start z-[3];
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 3.5rem;
+    min-width: 380px;
+    max-width: 420px;
+    min-height: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    flex-shrink: 0;
+    margin-inline-end: 2rem;
+  }
+
+  @media (max-width: 899px) {
+    .overviewHeroContent {
+      padding: 2.5rem;
+      min-width: 320px;
+      max-width: 380px;
+      min-height: 350px;
+      margin-inline-end: 1rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroContent {
+      padding: 1.5rem;
+      min-width: auto;
+      width: 100%;
+      min-height: auto;
+      max-width: 100%;
+      margin-inline-end: 0;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+      flex-shrink: 0;
+    }
+  }
+
+  .overviewHeroCaption {
+    @apply text-xs font-semibold uppercase tracking-wider mb-2;
+    color: var(--mui-palette-primary-main) !important;
+    font-size: 0.9rem;
+  }
+
+  .overviewHeroTitle {
+    @apply font-bold leading-tight mb-6;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 3.25rem;
+    font-weight: 900 !important;
+  }
+
+  @media (max-width: 899px) {
+    .overviewHeroTitle {
+      font-size: 2.5rem;
+      margin-block-end: 1.5rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroTitle {
+      font-size: 2.25rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  .overviewHeroDescription {
+    @apply mb-6;
+    color: var(--mui-palette-text-primary);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-align: start;
+    font-weight: 700;
+  }
+
+  @media (max-width: 899px) {
+    .overviewHeroDescription {
+      font-size: 1.15rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewHeroDescription {
+      font-size: 1.05rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  .overviewHeroButton {
+    @apply self-start px-8 py-3 font-semibold;
+    text-transform: capitalize;
+  }
+
+  .overviewSectionHeading {
+    @apply w-full text-center py-12;
+    background-color: var(--mui-palette-background-default);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overviewSectionHeadingText {
+    @apply text-center;
+    color: var(--mui-palette-text-primary);
+    font-size: 2.75rem;
+    line-height: 1.3;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewSectionHeadingText {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewSectionHeadingText {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewSectionHeadingText {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+
+  .overviewFeatureSection {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-background-default);
+    max-width: none;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .overviewFeatureSection.reversed {
+    @apply flex-row-reverse w-full;
+    background-color: var(--mui-palette-action-hover);
+    max-width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewFeatureSection,
+    .overviewFeatureSection.reversed {
+      padding: 3rem 3rem;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureSection,
+    .overviewFeatureSection.reversed {
+      @apply flex-row;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewFeatureSection,
+    .overviewFeatureSection.reversed {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+  }
+
+  .overviewFeatureImage {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureImage {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewFeatureImage {
+      width: 100%;
+    }
+  }
+
+  .overviewFeatureImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewFeatureImg {
+      width: 100%;
+      max-height: 450px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureImg {
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+
+  .overviewFeatureContent {
+    @apply flex flex-col justify-center;
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureContent {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewFeatureContent {
+      width: 100%;
+    }
+  }
+
+  .overviewFeatureCaption {
+    @apply text-xs font-semibold uppercase tracking-widest mb-2;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .overviewFeatureTitle {
+    @apply font-bold leading-tight mb-4;
+    color: var(--mui-palette-text-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewFeatureTitle {
+      font-size: 2rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureTitle {
+      font-size: 1.75rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  .overviewFeatureDescription {
+    @apply mb-6;
+    color: var(--mui-palette-text-primary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  @media (max-width: 899px) {
+    .overviewFeatureDescription {
+      margin-block-end: 1.5rem;
+      font-size: 1.05rem;
+    }
+  }
+
+  .overviewShowMoreLink {
+    @apply font-semibold text-base no-underline cursor-pointer w-fit;
+    color: var(--mui-palette-primary-main) !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+      gap: 0.5rem;
+    }
+  }
+}

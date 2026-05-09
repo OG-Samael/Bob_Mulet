@@ -1,0 +1,225 @@
+/**
+ * shared-page.css
+ * Reusable layout classes shared across dashboard pages.
+ * Import this file in per-page CSS files as needed.
+ */
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  /* ── Hero banner ─────────────────────────────────────── */
+  .pgHero {
+    @apply relative w-full flex items-center overflow-hidden;
+    min-height: 600px;
+  }
+
+  .pgHeroShort {
+    @apply relative w-full flex items-center justify-center overflow-hidden;
+    min-height: 200px;
+  }
+
+  .pgHeroContainer {
+    @apply relative z-[1] py-12;
+  }
+
+  .pgHeroOverlayImg {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  /* ── Two‑column flex layouts ─────────────────────────── */
+  .pgTwoCol {
+    @apply flex flex-col-reverse items-center gap-6;
+  }
+
+  @media (min-width: 900px) {
+    .pgTwoCol {
+      flex-direction: row;
+    }
+  }
+
+  .pgTwoColForward {
+    @apply flex flex-col items-center gap-6;
+  }
+
+  @media (min-width: 900px) {
+    .pgTwoColForward {
+      flex-direction: row;
+    }
+  }
+
+  .pgCol {
+    @apply flex-1 min-w-0;
+  }
+
+  /* ── Image boxes ─────────────────────────────────────── */
+  .pgImgBox {
+    @apply relative w-full overflow-hidden rounded-2xl flex-1;
+    aspect-ratio: 1 / 1;
+  }
+
+  .pgImgBox43 {
+    @apply relative w-full overflow-hidden rounded-2xl flex-1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .pgImgBox169 {
+    @apply relative w-full overflow-hidden rounded-2xl flex-1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .pgCoverImg {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .pgContainImg {
+    @apply absolute inset-0 w-full h-full object-contain;
+  }
+
+  /* ── Section containers ──────────────────────────────── */
+  .pgSection {
+    @apply py-12;
+  }
+
+  .pgSectionCenter {
+    @apply py-12 text-center;
+  }
+
+  /* ── Standard card ───────────────────────────────────── */
+  .pgCard {
+    @apply flex flex-col overflow-hidden rounded-2xl shadow-md;
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .pgCardImg {
+    @apply relative w-full;
+    height: 240px;
+  }
+
+  .pgCardBody {
+    @apply flex flex-col flex-1 p-4;
+  }
+
+  /* ── Card grids ──────────────────────────────────────── */
+  .pgCardGrid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .pgCardGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ── Product layout ──────────────────────────────────── */
+  .pgProductBox {
+    @apply rounded-2xl p-8;
+    background-color: #222f3e26;
+  }
+
+  @media (min-width: 900px) {
+    .pgProductBox {
+      padding: 4rem;
+    }
+  }
+
+  .pgProductGrid {
+    @apply flex flex-wrap justify-center gap-4;
+  }
+
+  .pgProductCard {
+    @apply flex flex-col overflow-hidden rounded-2xl shadow-md;
+    background-color: var(--mui-palette-background-paper);
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    .pgProductCard {
+      width: calc(33.333% - 1.5rem);
+      min-width: 260px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .pgProductCard {
+      width: calc(25% - 1.5rem);
+    }
+  }
+
+  .pgProductCardImg {
+    @apply relative w-full;
+    aspect-ratio: 3 / 2;
+    min-height: 220px;
+  }
+
+  .pgProductCardBody {
+    @apply flex flex-col items-center flex-1;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  /* ── Horizontal scroll row ───────────────────────────── */
+  .pgScrollRow {
+    @apply flex overflow-x-auto gap-4 pb-12 px-2 w-full;
+    scrollbar-width: none;
+  }
+
+  .pgScrollRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pgScrollCard {
+    @apply flex flex-col overflow-hidden rounded-2xl shadow-md flex-shrink-0;
+    background-color: var(--mui-palette-background-paper);
+    min-width: 300px;
+  }
+
+  .pgScrollCardImgBox {
+    @apply relative;
+    aspect-ratio: 3 / 4;
+  }
+
+  .pgScrollCardBody {
+    @apply flex flex-col flex-1 p-4;
+  }
+
+  /* ── Green‑screen banner section ─────────────────────── */
+  .pgGreenSection {
+    @apply relative w-full overflow-hidden;
+    min-height: 450px;
+  }
+
+  @media (min-width: 900px) {
+    .pgGreenSection {
+      min-height: 500px;
+    }
+  }
+
+  .pgGreenSectionInner {
+    @apply relative z-[1] flex flex-col justify-center items-center text-center py-8;
+    color: white;
+  }
+
+  /* ── Typography helpers ──────────────────────────────── */
+  .pgPrimaryLabel {
+    @apply font-bold mb-2;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .pgBoldTitle {
+    @apply font-bold mb-4;
+  }
+
+  .pgBodyMuted {
+    color: var(--mui-palette-text-secondary);
+    font-size: 1.1rem;
+  }
+
+  .pgWhiteText {
+    color: white !important;
+  }
+
+  /* ── Buttons ─────────────────────────────────────────── */
+  .pgRoundBtn {
+    border-radius: 500px !important;
+  }
+}

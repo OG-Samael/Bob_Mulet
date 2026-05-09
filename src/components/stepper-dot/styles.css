@@ -1,0 +1,24 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .stepperCustomDot {
+    @apply w-5 h-5 rounded-full border-[3px] border-solid;
+    border-color: var(--mui-palette-primary-lightOpacity);
+  }
+
+  .stepperCustomDot.activeStepperCustomDot {
+    border-width: 5px;
+    border-color: var(--mui-palette-primary-main);
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  .stepperCustomDot.completedStepperCustomDot {
+    background-color: var(--mui-palette-primary-main);
+    border-color: var(--mui-palette-primary-main);
+  }
+
+  .errorColor {
+    color: var(--mui-palette-error-main);
+  }
+}

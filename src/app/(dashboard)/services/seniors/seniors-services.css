@@ -1,0 +1,318 @@
+@import '../../shared-page.css';
+
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .seniorsScrollContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .seniorsGreenSection {
+    @apply relative w-full;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 70%, #1b5e20 100%);
+  }
+
+  .seniorsScrollCards {
+    @apply flex overflow-x-auto gap-3 w-full pb-2 px-2;
+    scrollbar-width: none;
+  }
+
+  .seniorsScrollCards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seniorsScrollCard {
+    @apply flex flex-col overflow-hidden rounded-2xl shadow-md flex-shrink-0;
+    background-color: var(--mui-palette-background-paper);
+    min-width: 280px;
+    max-width: 320px;
+    color: var(--mui-palette-text-primary);
+  }
+
+  .seniorsCardImgBox {
+    @apply relative w-full;
+    height: 180px;
+  }
+
+  .seniorsCardLinkBtn {
+    @apply font-bold;
+    color: var(--mui-palette-primary-main);
+    text-transform: none;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .seniorsCardLinkBtn:hover {
+    text-decoration: underline;
+  }
+
+  .seniorsServicesIntro {
+    @apply flex flex-col items-center text-center mt-8 mb-4;
+    gap: 0.75rem;
+    max-width: 700px;
+  }
+
+  .seniorsServiceRow {
+    @apply flex w-full justify-between mt-4;
+    max-width: 900px;
+    flex-wrap: wrap;
+    padding-inline: 1rem;
+  }
+
+  .seniorsServiceItem {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .seniorsServiceIcon {
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .seniorsWhiteCtaBtn {
+    background-color: white !important;
+    color: var(--mui-palette-primary-main) !important;
+    border-radius: 500px !important;
+  }
+
+  .seniorsWhiteCtaBtn:hover {
+    background-color: #f5f5f5 !important;
+  }
+
+  .seniorsCenterSection {
+    @apply flex flex-col items-center justify-center text-center py-12;
+  }
+
+  .seniorsCenterIcon {
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+  }
+
+  .seniorsCenterTitle {
+    @apply font-bold mb-2;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .overviewSplitSectionReversed {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-action-hover);
+    justify-content: center;
+    max-width: none;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewSplitSectionReversed {
+      padding: 3rem 3rem;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitSectionReversed {
+      flex-direction: column-reverse;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewSplitSectionReversed {
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+  }
+
+  .overviewSplitSection {
+    @apply flex flex-row items-center w-full;
+    padding: 3rem 5rem;
+    gap: 4rem;
+    background-color: var(--mui-palette-background-default);
+    justify-content: center;
+    max-width: none;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewSplitSection {
+      padding: 3rem 3rem;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitSection {
+      @apply flex-col;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewSplitSection {
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+  }
+
+  .overviewSplitImage {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitImage {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .overviewSplitImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewSplitImg {
+      max-height: 450px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitImg {
+      max-height: 400px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .overviewSplitImg {
+      max-height: none;
+      width: 100%;
+    }
+  }
+
+  .overviewSplitText {
+    @apply flex flex-col justify-center;
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitText {
+      width: 100%;
+      flex: none;
+      max-width: none;
+    }
+  }
+
+  .overviewSplitTitle {
+    @apply font-bold leading-tight mb-4;
+    color: var(--mui-palette-text-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  @media (max-width: 1024px) {
+    .overviewSplitTitle {
+      font-size: 2rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitTitle {
+      font-size: 1.75rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  .overviewSplitDescription {
+    @apply mb-6;
+    color: var(--mui-palette-text-primary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  @media (max-width: 899px) {
+    .overviewSplitDescription {
+      margin-block-end: 1.5rem;
+      font-size: 1.05rem;
+    }
+  }
+
+  .tipsSection {
+    @apply py-12 w-full;
+    background-color: #1b5e20;
+    color: white;
+  }
+
+  .tipsSectionHeading {
+    @apply font-bold text-center mb-8 text-2xl;
+    color: white;
+  }
+
+  .tipsGrid {
+    @apply grid gap-4;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .tipsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .tipsCard {
+    @apply flex flex-col overflow-hidden rounded-2xl;
+    background-color: var(--mui-palette-background-paper);
+    color: var(--mui-palette-text-primary);
+  }
+
+  .tipsCardImage {
+    @apply w-full bg-cover bg-center bg-no-repeat;
+    height: 240px;
+  }
+
+  .tipsCardHeading {
+    @apply font-bold mb-2;
+    padding: 1rem 1rem 0;
+  }
+
+  .tipsCardText {
+    @apply text-sm leading-relaxed;
+    padding: 0.5rem 1rem;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .tipsCardLink {
+    @apply font-bold text-sm;
+    padding: 0.75rem 1rem;
+    color: var(--mui-palette-primary-main);
+    text-decoration: none;
+    display: block;
+  }
+
+  .tipsCardLink:hover {
+    text-decoration: underline;
+  }
+}
+

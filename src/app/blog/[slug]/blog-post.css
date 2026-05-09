@@ -1,0 +1,94 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .blog-post-container {
+    @apply max-w-4xl mx-auto px-4 py-8;
+  }
+
+  .blog-post-back-link {
+    @apply mb-4;
+    color: var(--mui-palette-primary-main);
+    text-decoration: underline;
+  }
+
+  .blog-post-title {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  .blog-post-meta {
+    @apply text-sm mb-6;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blog-post-excerpt {
+    @apply italic pl-4 mb-6;
+    border-left: 4px solid var(--mui-palette-primary-main);
+  }
+
+  .blog-post-image {
+    @apply w-full rounded-lg mb-8;
+    height: 24rem;
+    object-fit: cover;
+  }
+
+  .blog-post-content {
+    @apply max-w-none;
+  }
+
+  .blog-post-content h1 {
+    @apply text-3xl font-bold mt-8 mb-4;
+  }
+
+  .blog-post-content h2 {
+    @apply text-2xl font-bold mt-6 mb-3;
+  }
+
+  .blog-post-content h3 {
+    @apply text-xl font-bold mt-4 mb-2;
+  }
+
+  .blog-post-content p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .blog-post-content ul,
+  .blog-post-content ol {
+    @apply mb-4 ml-6;
+  }
+
+  .blog-post-content li {
+    @apply mb-2;
+  }
+
+  .blog-post-content a {
+    color: var(--mui-palette-primary-main);
+    text-decoration: underline;
+  }
+
+  .blog-post-content img {
+    @apply max-w-full h-auto rounded-lg my-4;
+  }
+
+  .blog-post-content blockquote {
+    @apply pl-4 italic my-4;
+    border-left: 4px solid var(--mui-palette-divider);
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blog-post-content code {
+    @apply px-2 py-1 rounded text-sm;
+    background-color: var(--mui-palette-action-hover);
+  }
+
+  .blog-post-content pre {
+    @apply p-4 rounded-lg overflow-x-auto my-4;
+    background-color: var(--mui-palette-action-hover);
+  }
+
+  .blog-post-cover-img {
+    object-fit: cover;
+  }
+}
+
+

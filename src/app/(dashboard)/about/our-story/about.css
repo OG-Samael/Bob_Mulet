@@ -1,0 +1,23 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .aboutContainer {
+    @apply flex flex-col items-center justify-center min-h-screen p-8;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  .aboutContent {
+    @apply max-w-[800px] text-center;
+  }
+
+  .aboutTitle {
+    @apply text-[2.5rem] font-bold mb-6;
+    color: var(--mui-palette-primary-main);
+  }
+
+  .aboutDescription {
+    @apply text-base leading-[1.6] mb-8;
+    color: var(--mui-palette-text-primary);
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "prod-1",
+    "categoryId": "cat-latitude-shampoo",
+    "name": "Nourishing Shampoo",
+    "shortDescription": "A color-safe shampoo that cleanses hair, adds moisture and restores shine.",
+    "longDescription": "Ideal for daily use on all hair types.",
+    "image": "/uploads/products/1775466977009-Screenshot_2025-07-31_152904.png",
+    "benefits": "",
+    "instructions": "",
+    "ingredients": "",
+    "amazonUrl": "",
+    "salonUrl": ""
+  }
+]

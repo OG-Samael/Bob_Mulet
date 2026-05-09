@@ -1,0 +1,303 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .seniorContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  /* ── Hero split: Image left / Text right ─────────────── */
+  .seniorHeroSection {
+    @apply flex flex-col items-center justify-start w-full;
+    padding-block-start: 3rem;
+    padding-block-end: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .seniorHeroSection {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding-inline: 3rem;
+      padding-block-start: 3rem;
+      gap: 4rem;
+    }
+  }
+
+  /* Left: image */
+  .seniorHeroImageBox {
+    @apply relative flex-shrink-0;
+    width: 100%;
+    height: 360px;
+  }
+
+  @media (min-width: 900px) {
+    .seniorHeroImageBox {
+      width: 520px;
+      height: 420px;
+    }
+  }
+
+  .seniorHeroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Right: text */
+  .seniorHeroText {
+    @apply flex flex-col justify-center items-start px-8;
+    padding-block: 1.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .seniorHeroText {
+      flex: 1;
+      padding-inline: 5rem;
+      padding-block: 4rem;
+    }
+  }
+
+  .seniorSubHeading {
+    @apply font-semibold tracking-widest mb-3;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .seniorHeading {
+    @apply font-bold leading-[1.2];
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1199px) {
+    .seniorHeading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .seniorHeading {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .seniorHeading {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* ── Green two-column section ─────────────────────────── */
+  .seniorGreenSection {
+    @apply flex flex-col gap-6 rounded-2xl;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+    max-width: 860px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .seniorGreenSection {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 3rem;
+      gap: 3rem;
+    }
+  }
+
+  /* Left text */
+  .seniorGreenLeft {
+    @apply flex flex-col justify-center;
+    flex: 1;
+  }
+
+  .seniorGreenHeading {
+    @apply font-bold mb-4;
+    color: white !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .seniorGreenHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .seniorGreenText {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  /* Right white card */
+  .seniorGreenCard {
+    @apply flex flex-col justify-center rounded-2xl flex-shrink-0;
+    background-color: white;
+    padding: 2.5rem;
+    flex: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 599px) {
+    .seniorGreenCard {
+      padding: 1.75rem;
+    }
+  }
+
+  .seniorGreenCardHeading {
+    @apply font-bold mb-4;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.4rem;
+  }
+
+  .seniorGreenList {
+    @apply mb-2;
+  }
+
+  .seniorGreenListItem {
+    @apply py-1;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.95rem;
+  }
+
+  .seniorGreenListItem::before {
+    content: '•';
+    color: #2e7d32;
+    font-weight: bold;
+    margin-inline-end: 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  /* ── White split box ──────────────────────────────────── */
+  .seniorWhiteBox {
+    @apply flex flex-col rounded-2xl overflow-hidden;
+    max-width: 860px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    background-color: var(--mui-palette-background-paper);
+  }
+
+  @media (min-width: 900px) {
+    .seniorWhiteBox {
+      flex-direction: row;
+      min-height: 360px;
+    }
+  }
+
+  .seniorWhiteBoxText {
+    @apply flex flex-col justify-center items-start p-8;
+    flex: 1;
+  }
+
+  @media (min-width: 900px) {
+    .seniorWhiteBoxText {
+      padding: 3rem;
+    }
+  }
+
+  .seniorWhiteSubHeading {
+    @apply font-semibold tracking-widest mb-2;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .seniorWhiteHeading {
+    @apply font-bold leading-[1.2] mb-3;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.6rem;
+  }
+
+  .seniorWhiteBody {
+    @apply mb-6;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .seniorWhiteBoxImage {
+    @apply relative flex-shrink-0;
+    flex: 1;
+    min-height: 260px;
+  }
+
+  .seniorWhiteBoxImg {
+    @apply object-cover;
+  }
+
+  /* ── Full-width green section ──────────────────────────────── */
+  .seniorFullGreenSection {
+    @apply flex flex-col items-center w-full px-6 py-16;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+  }
+
+  @media (min-width: 900px) {
+    .seniorFullGreenSection {
+      padding-inline: 5rem;
+    }
+  }
+
+  .seniorFullGreenHeading {
+    @apply font-bold text-center mb-4;
+    color: white !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .seniorFullGreenHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .seniorFullGreenSubtext {
+    @apply text-center mb-12;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 640px;
+  }
+
+  .seniorCardRow {
+    @apply flex flex-col gap-6 w-full;
+    max-width: 1100px;
+  }
+
+  @media (min-width: 900px) {
+    .seniorCardRow {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  .seniorCard {
+    @apply flex flex-col rounded-2xl p-6;
+    flex: 1;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .seniorCardHeading {
+    @apply font-bold mb-3;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.1rem;
+  }
+
+  .seniorCardText {
+    @apply mb-6;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    flex: 1;
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Haircut",
+      "duration": 30
+    },
+    {
+      "id": 2,
+      "name": "Hair Color",
+      "duration": 90
+    },
+    {
+      "id": 3,
+      "name": "Beard Trim",
+      "duration": 15
+    }
+  ],
+  "stylists": [
+    {
+      "id": 1,
+      "name": "Anna",
+      "skills": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mark",
+      "skills": [
+        1,
+        3
+      ]
+    }
+  ],
+  "queue": [
+    {
+      "queueId": 1,
+      "customerName": "aman",
+      "serviceIds": [
+        1,
+        2
+      ],
+      "stylistId": null,
+      "appointmentDate": "2026-03-15",
+      "appointmentTime": "11:20",
+      "checkInTime": "2026-03-15T15:53:57.745Z",
+      "status": "in_service",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 2,
+      "customerName": "Samael",
+      "serviceIds": [
+        1,
+        3
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-15",
+      "appointmentTime": "11:20",
+      "checkInTime": "2026-03-15T16:06:02.013Z",
+      "status": "in_service",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 3,
+      "customerName": "aman",
+      "serviceIds": [
+        1,
+        2
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-15",
+      "appointmentTime": "13:00",
+      "checkInTime": "2026-03-15T16:33:45.862Z",
+      "status": "waiting",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 4,
+      "customerName": "suyash",
+      "serviceIds": [
+        1,
+        3
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-15",
+      "appointmentTime": "15:15",
+      "checkInTime": "2026-03-15T16:34:12.345Z",
+      "status": "waiting",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 5,
+      "customerName": "smriti",
+      "serviceIds": [
+        1
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-16",
+      "appointmentTime": "10:30",
+      "checkInTime": "2026-03-15T16:36:03.737Z",
+      "status": "waiting",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 6,
+      "customerName": "shashank",
+      "serviceIds": [
+        2
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-16",
+      "appointmentTime": "13:45",
+      "checkInTime": "2026-03-15T16:36:43.293Z",
+      "status": "waiting",
+      "estimatedStart": null
+    },
+    {
+      "queueId": 7,
+      "customerName": "asdaf",
+      "serviceIds": [
+        3,
+        2,
+        1
+      ],
+      "stylistId": 1,
+      "appointmentDate": "2026-03-16",
+      "appointmentTime": "16:00",
+      "checkInTime": "2026-03-15T16:40:18.994Z",
+      "status": "waiting",
+      "estimatedStart": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  /* On mobile: horizontal scroll row. On md+: 3-column grid */
+  .blogTipsGrid {
+    @apply flex overflow-x-auto gap-4 pb-4 px-2;
+    scrollbar-width: none;
+  }
+
+  .blogTipsGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .blogTipsGrid {
+      @apply grid overflow-x-visible px-0 pb-0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .blogTipsCard {
+    @apply flex flex-col items-center text-center p-6 rounded-lg flex-shrink-0;
+    min-width: 280px;
+    max-width: 320px;
+    background-color: var(--mui-palette-action-hover);
+    transition: background-color 0.2s;
+  }
+
+  .blogTipsCard:hover {
+    background-color: var(--mui-palette-action-selected);
+  }
+
+  @media (min-width: 900px) {
+    .blogTipsCard {
+      min-width: unset;
+      flex-shrink: 1;
+    }
+  }
+
+  .blogTipsCardImg {
+    @apply rounded mb-4;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blogTipsCardTitle {
+    @apply font-bold text-lg mb-2;
+  }
+
+  .blogTipsCardExcerpt {
+    @apply mb-3;
+    color: var(--mui-palette-text-secondary);
+  }
+
+  .blogTipsCardLink {
+    @apply font-semibold;
+    color: var(--mui-palette-primary-main);
+    text-decoration: none;
+  }
+
+  .blogTipsCardLink:hover {
+    text-decoration: underline;
+  }
+}

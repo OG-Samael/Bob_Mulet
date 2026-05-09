@@ -1,0 +1,129 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .loginContainer {
+    @apply flex h-full justify-center;
+  }
+
+  .illustrationSection {
+    @apply flex h-full items-center justify-center flex-1 min-h-[100dvh] relative p-6;
+    border-inline-end: 1px solid var(--mui-palette-divider);
+  }
+
+  @media (max-width: 960px) {
+    .illustrationSection {
+      display: none;
+    }
+  }
+
+  .loginIllustration {
+    z-index: 2;
+    block-size: auto;
+    max-block-size: 680px;
+    max-inline-size: 100%;
+    margin: 3rem;
+  }
+
+  @media (max-width: 1536px) {
+    .loginIllustration {
+      max-block-size: 550px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .loginIllustration {
+      max-block-size: 450px;
+    }
+  }
+
+  .maskImage {
+    block-size: auto;
+    max-block-size: 355px;
+    inline-size: 100%;
+    position: absolute;
+    inset-block-end: 0;
+    z-index: -1;
+  }
+
+  .maskImageRtl {
+    transform: scaleX(-1);
+  }
+
+  .formSection {
+    @apply flex justify-center items-center h-full p-6;
+    background-color: var(--mui-palette-background-paper);
+    min-inline-size: 100%;
+  }
+
+  @media (min-width: 960px) {
+    .formSection {
+      min-inline-size: unset;
+      padding: 3rem;
+      inline-size: 480px;
+    }
+  }
+
+  .formContainer {
+    @apply relative flex flex-col gap-6 w-full;
+  }
+
+  .logoLink {
+    position: absolute;
+    block-start: 1.25rem;
+    inline-start: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .logoLink {
+      block-start: 2rem;
+      inline-start: 2.375rem;
+    }
+  }
+
+  .contentWrapper {
+    @apply flex flex-col gap-6 w-full;
+    margin-block-start: 2.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .contentWrapper {
+      inline-size: auto;
+      max-inline-size: 400px;
+      margin-block-start: 3.5rem;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .contentWrapper {
+      inline-size: 100%;
+      max-inline-size: unset;
+      margin-block-start: 0;
+    }
+  }
+
+  .headerSection {
+    @apply flex flex-col gap-1;
+  }
+
+  .form {
+    @apply flex flex-col gap-5;
+  }
+
+  .checkboxSection {
+    @apply flex justify-between items-center gap-x-3 gap-y-1 flex-wrap;
+  }
+
+  .divider {
+    @apply my-6;
+  }
+
+  .signupSection {
+    @apply flex justify-center items-center flex-wrap gap-1;
+  }
+
+  .forgotPasswordLink {
+    text-align: end;
+    color: var(--mui-palette-primary-main);
+  }
+}

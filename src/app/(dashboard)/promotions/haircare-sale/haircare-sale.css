@@ -1,0 +1,258 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .haircareContainer {
+    @apply flex flex-col w-full overflow-y-auto overflow-x-hidden;
+    height: 100%;
+    background-color: var(--mui-palette-background-default);
+  }
+
+  /* ── Hero split: Image left / Text right ─────────────── */
+  .haircareHeroSection {
+    @apply flex flex-col items-center justify-start w-full;
+    padding-block-start: 3rem;
+    padding-block-end: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .haircareHeroSection {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding-inline: 3rem;
+      padding-block-start: 3rem;
+      gap: 4rem;
+    }
+  }
+
+  .haircareHeroImageBox {
+    @apply relative flex-shrink-0;
+    width: 100%;
+    height: 360px;
+  }
+
+  @media (min-width: 900px) {
+    .haircareHeroImageBox {
+      width: 520px;
+      height: 420px;
+    }
+  }
+
+  .haircareHeroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .haircareHeroText {
+    @apply flex flex-col justify-center items-start px-8 py-12;    padding-block: 1.5rem;  }
+
+  @media (min-width: 900px) {
+    .haircareHeroText {
+      flex: 1;
+      padding-inline: 2rem;
+      padding-block: 4rem;
+    }
+  }
+
+  .haircareSubHeading {
+    @apply font-semibold tracking-widest mb-3;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mui-palette-primary-main) !important;
+  }
+
+  .haircareHeading {
+    @apply font-bold leading-[1.2];
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1199px) {
+    .haircareHeading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .haircareHeading {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .haircareHeading {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* ── Green two-column section ────────────────────────── */
+  .haircareGreenSection {
+    @apply flex flex-col gap-6 rounded-2xl;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+    max-width: 860px;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .haircareGreenSection {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 3rem;
+      gap: 3rem;
+    }
+  }
+
+  .haircareGreenLeft {
+    @apply flex flex-col justify-center;
+    flex: 1;
+  }
+
+  .haircareGreenHeading {
+    @apply font-bold mb-4;
+    color: white !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .haircareGreenHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .haircareGreenText {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .haircareGreenCard {
+    @apply flex flex-col justify-center rounded-2xl flex-shrink-0;
+    background-color: white;
+    padding: 2.5rem;
+    flex: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 599px) {
+    .haircareGreenCard {
+      padding: 1.75rem;
+    }
+  }
+
+  .haircareGreenCardHeading {
+    @apply font-bold mb-4;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.4rem;
+  }
+
+  .haircareGreenList {
+    @apply mb-2;
+  }
+
+  .haircareGreenListItem {
+    @apply py-1;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.95rem;
+  }
+
+  .haircareGreenListItem::before {
+    content: '•';
+    color: #2e7d32;
+    font-weight: bold;
+    margin-inline-end: 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  /* ── Full-width green section with image cards ───────── */
+  .haircareFullGreenSection {
+    @apply flex flex-col items-center w-full px-6 py-16;
+    background: linear-gradient(to bottom, #66bb6a, #0d3b0d);
+  }
+
+  @media (min-width: 900px) {
+    .haircareFullGreenSection {
+      padding-inline: 5rem;
+    }
+  }
+
+  .haircareFullGreenHeading {
+    @apply font-bold text-center mb-4;
+    color: white !important;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    .haircareFullGreenHeading {
+      font-size: 1.5rem;
+    }
+  }
+
+  .haircareFullGreenSubtext {
+    @apply text-center mb-12;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 640px;
+  }
+
+  .haircareCardRow {
+    @apply flex flex-col gap-6 w-full;
+    max-width: 1100px;
+  }
+
+  @media (min-width: 900px) {
+    .haircareCardRow {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  .haircareCard {
+    @apply flex flex-col rounded-2xl overflow-hidden;
+    flex: 1;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .haircareCardImageBox {
+    @apply relative w-full;
+    aspect-ratio: 16 / 9;
+  }
+
+  .haircareCardImage {
+    @apply object-cover;
+  }
+
+  .haircareCardBody {
+    @apply flex flex-col p-5;
+    flex: 1;
+  }
+
+  .haircareCardHeading {
+    @apply font-bold mb-2;
+    color: var(--mui-palette-text-primary) !important;
+    font-size: 1.05rem;
+  }
+
+  .haircareCardText {
+    @apply mb-4;
+    color: var(--mui-palette-text-secondary) !important;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .haircareCardLink {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--mui-palette-primary-main) !important;
+  }
+}

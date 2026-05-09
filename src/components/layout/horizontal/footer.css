@@ -1,0 +1,51 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .footerContainer {
+    @apply flex w-full py-2 px-6 gap-8 text-white;
+    background-color: #1a1a2e;
+  }
+
+  .linksSectionCentered {
+    @apply flex w-full justify-around gap-8;
+  }
+
+  .linkColumn {
+    @apply flex flex-col gap-3 min-w-[120px];
+  }
+
+  .columnTitle {
+    @apply font-bold text-base mb-1 text-white;
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .footerContainer {
+      @apply flex-row gap-4 py-6 px-4;
+    }
+
+    .leftSection {
+      @apply flex-1;
+    }
+
+    .linksSection {
+      @apply flex-1 justify-end flex-nowrap gap-3;
+    }
+
+    .linkColumn {
+      @apply min-w-0 gap-1.5;
+    }
+
+    .columnTitle {
+      font-size: 0.75rem;
+      margin-bottom: 0.0625rem;
+    }
+
+    .columnLink {
+      font-size: 0.625rem;
+      line-height: 1.3;
+    }
+  }
+}

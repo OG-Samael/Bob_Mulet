@@ -1,0 +1,8 @@
+@reference "tailwindcss/theme";
+@reference "tailwindcss/utilities";
+
+@layer components {
+  .verticalNavBgImage {
+    @apply w-full h-full absolute top-0 left-0 object-cover object-center z-[2];
+  }
+}

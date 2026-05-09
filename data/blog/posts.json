@@ -1,0 +1,66 @@
+[
+  {
+    "id": "uuid-or-nanoid",
+    "slug": "summer-hair-care-tips",
+    "category": "Hair Care",
+    "title": "Summer Hair Care Tips",
+    "excerpt": "Keep your hair healthy and shiny all summer long with these simple tips.",
+    "mainImage": "/uploads/blog/1775466444321-Screenshot 2026-01-24 223748.png",
+    "date": "2025-03-17T00:00:00.000Z",
+    "author": "Admin",
+    "status": "published",
+    "rolesAllowed": [
+      "admin",
+      "editor"
+    ],
+    "content": {
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Protect your hair from the sun"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use a UV-protectant spray before going out..."
+        },
+        {
+          "type": "bulleted-list",
+          "items": [
+            "Wear a hat",
+            "Avoid peak sun hours"
+          ]
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Wash with mild shampoo",
+            "Use conditioner"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/uploads/blog/uv-spray.jpg",
+          "alt": "UV spray"
+        },
+        {
+          "type": "link",
+          "text": "Book a treatment",
+          "href": "/services/treatments"
+        }
+      ]
+    },
+    "contentHtml": ""
+  },
+  {
+    "title": "Men's Styling: Get the Perfect Fade Haircut With Our Guide",
+    "category": "Hair Cut",
+    "excerpt": "Are you looking for a timeless look that’ll never fade?\n\nFade haircuts are stylish, versatile and easy to maintain. With so many different types, you’re guaranteed to find a look that fits your hair type, face shape and personal style. In this fade guide, we’re giving you some hairspiration to help you find the perfect look that suits you best. And don’t forget to stop by your local Great Clips salon – your team of stylists is here to help bring your fade to life!",
+    "mainImage": "/uploads/blog/1773927876960-mens-hair-services-blog-section.jpg",
+    "slug": "men-s-styling-get-the-perfect-fade-haircut-with-our-guide",
+    "status": "published",
+    "contentHtml": "",
+    "id": "d6c1beb9-1205-4a06-9b35-1b3263bfbf69",
+    "date": "2026-03-19T13:45:11.299Z"
+  }
+]

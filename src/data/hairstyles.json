@@ -1,0 +1,623 @@
+[
+    {
+        "id": "hs-men-1",
+        "title": "Fade with Side Part",
+        "category": "men",
+        "featureImage": "/images/salon/AdamNew.png",
+        "tags": [
+            "Fade",
+            "Classic",
+            "Side Part"
+        ],
+        "description": "A clean fade combined with a sharp side part creates a timeless, professional look. Perfect for any occasion and easy to maintain.",
+        "cutFrequency": "Every 2-3 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Clean fade on sides and back",
+                    "Sharp side part on top",
+                    "Works for straight and wavy hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-2",
+        "title": "Clippered Pushback",
+        "category": "men",
+        "featureImage": "/images/salon/LarryNew.png",
+        "tags": [
+            "Clippers",
+            "Pushback",
+            "Modern"
+        ],
+        "description": "A modern style with clippers on the sides and hair pushed back on top for a polished, contemporary look.",
+        "cutFrequency": "Every 3-4 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Clippered sides for clean lines",
+                    "Hair swept back for volume",
+                    "Versatile for formal and casual settings"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-3",
+        "title": "Short Scissor Cut",
+        "category": "men",
+        "featureImage": "/images/salon/DaleNew.png",
+        "tags": [
+            "Scissors",
+            "Short",
+            "Classic"
+        ],
+        "description": "A precise scissor cut that keeps the hair short and neat. Timeless and easy to style every morning.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Precision scissor work throughout",
+                    "Clean neckline and sides",
+                    "Low maintenance styling"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-4",
+        "title": "Paper Scissor Cut",
+        "category": "men",
+        "featureImage": "/images/salon/DahmianNew.png",
+        "tags": [
+            "Scissors",
+            "Textured",
+            "Short"
+        ],
+        "description": "A textured scissor cut with light, feathery layers that add movement and a natural finish.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Soft textured layers",
+                    "Natural movement",
+                    "Great for fine or medium hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-5",
+        "title": "Tousled Layers",
+        "category": "men",
+        "featureImage": "/images/salon/AlexanderNew.png",
+        "tags": [
+            "Layered",
+            "Tousled",
+            "Casual"
+        ],
+        "description": "Relaxed, layered styling that gives a naturally tousled look. Perfect for a laid-back, effortless vibe.",
+        "cutFrequency": "Every 5-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Layered throughout for volume",
+                    "Casually styled finish",
+                    "Works best with medium-length hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-6",
+        "title": "Long Pushback",
+        "category": "men",
+        "featureImage": "/images/salon/BradyNew.png",
+        "tags": [
+            "Long",
+            "Pushback",
+            "Styled"
+        ],
+        "description": "Longer hair swept back for a bold, confident style. Requires some product but rewards with a standout look.",
+        "cutFrequency": "Every 5-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Longer length on top",
+                    "Hair swept back with volume",
+                    "Ideal for medium to thick hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-men-7",
+        "title": "Clippered Sides with Layered Tops",
+        "category": "men",
+        "featureImage": "/images/salon/MosesNew.png",
+        "tags": [
+            "Clippers",
+            "Layered",
+            "Contrast"
+        ],
+        "description": "Short clippered sides contrast beautifully with layered, textured tops for a modern, high-impact style.",
+        "cutFrequency": "Every 3-4 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Short clippered sides",
+                    "Layered, textured top",
+                    "Strong contrast for a bold look"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-women-1",
+        "title": "Long Layers",
+        "category": "women",
+        "featureImage": "/images/salon/gc-home-oci-woman-with-phone.png",
+        "tags": [
+            "Long",
+            "Layered",
+            "Flowing"
+        ],
+        "description": "Soft, flowing layers that add movement and volume to long hair. A timeless look for any occasion.",
+        "cutFrequency": "Every 6-8 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Long layers throughout",
+                    "Adds body and movement",
+                    "Works for all hair textures"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-women-2",
+        "title": "Blunt Bob",
+        "category": "women",
+        "featureImage": "/images/salon/gc-home-clipNotes.png",
+        "tags": [
+            "Bob",
+            "Blunt",
+            "Chic"
+        ],
+        "description": "A clean, sharp bob cut that falls at the jaw. Bold, modern, and effortlessly stylish.",
+        "cutFrequency": "Every 4-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Blunt ends for a sharp finish",
+                    "Jaw-length cut",
+                    "Low maintenance and versatile"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-women-3",
+        "title": "Textured Pixie",
+        "category": "women",
+        "featureImage": "/images/salon/GC_8043_BTS_HomePg_BTS_600x388_findyournextgreatcut.jpg",
+        "tags": [
+            "Pixie",
+            "Textured",
+            "Short"
+        ],
+        "description": "A short, textured pixie cut that's full of personality. Easy to style and always on trend.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Short all-over length",
+                    "Textured finish for dimension",
+                    "Quick to style daily"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-women-4",
+        "title": "Curtain Bangs with Waves",
+        "category": "women",
+        "featureImage": "/images/salon/greatClips-women-1.jpg",
+        "tags": [
+            "Bangs",
+            "Waves",
+            "Romantic"
+        ],
+        "description": "Soft curtain bangs paired with loose waves for a romantic, effortlessly beautiful look.",
+        "cutFrequency": "Every 5-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Soft curtain-style bangs",
+                    "Loose wave styling",
+                    "Flatters most face shapes"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-women-5",
+        "title": "Shoulder-Length Lob",
+        "category": "women",
+        "featureImage": "/images/salon/greatClips-women-2.jpg",
+        "tags": [
+            "Lob",
+            "Shoulder",
+            "Modern"
+        ],
+        "description": "The long bob — shoulder-length, versatile, and flattering on everyone. The perfect in-between cut.",
+        "cutFrequency": "Every 6-8 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Shoulder-length cut",
+                    "Can be worn straight or wavy",
+                    "Great for fine to thick hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-kids-1",
+        "title": "Classic Bowl Cut",
+        "category": "kids",
+        "featureImage": "/images/salon/greatClips-haircareServices-kids-hero.jpg",
+        "tags": [
+            "Classic",
+            "Short",
+            "Easy"
+        ],
+        "description": "A fun and easy bowl cut that keeps hair neat and out of their face. A timeless kids' favorite.",
+        "cutFrequency": "Every 4-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Even all-around length",
+                    "Hair kept off the face",
+                    "Quick and easy to maintain"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-kids-2",
+        "title": "Tapered Sides",
+        "category": "kids",
+        "featureImage": "/images/salon/greatClips-haircareServices-kids-1.jpg",
+        "tags": [
+            "Tapered",
+            "Neat",
+            "Short"
+        ],
+        "description": "Clean tapered sides with a little more length on top. A smart, polished look for school or special events.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Tapered sides for a clean look",
+                    "Longer on top for styling",
+                    "Works for straight or curly hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-kids-3",
+        "title": "Long & Layered",
+        "category": "kids",
+        "featureImage": "/images/salon/greatClips-haircareServices-kids-3.jpg",
+        "tags": [
+            "Long",
+            "Layered",
+            "Natural"
+        ],
+        "description": "Soft layers for kids who love to keep their hair long. Healthy, bouncy, and easy to comb through.",
+        "cutFrequency": "Every 6-8 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Light layers for volume",
+                    "Keeps ends healthy",
+                    "Comfortable for active kids"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-kids-4",
+        "title": "Playful Fringe",
+        "category": "kids",
+        "featureImage": "/images/salon/gc-home-clipNotes.png",
+        "tags": [
+            "Fringe",
+            "Fun",
+            "Bangs"
+        ],
+        "description": "Cute, playful fringe bangs that frame the face perfectly. Great for both boys and girls.",
+        "cutFrequency": "Every 3-4 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Straight or side-swept fringe",
+                    "Frames the face naturally",
+                    "Simple and adorable"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-kids-5",
+        "title": "Curly Shape-Up",
+        "category": "kids",
+        "featureImage": "/images/salon/GC_8043_BTS_HomePg_BTS_600x388_findyournextgreatcut.jpg",
+        "tags": [
+            "Curly",
+            "Natural",
+            "Shape-Up"
+        ],
+        "description": "A gentle shape-up that celebrates natural curls while keeping the style looking fresh and defined.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Works with natural curl pattern",
+                    "Clean edges and shape",
+                    "Curl-friendly techniques"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-male-1",
+        "title": "Classic Barbershop Cut",
+        "category": "senior-male",
+        "featureImage": "/images/salon/GC_8043_BTS_HomePg_BTS_600x388_findyournextgreatcut.jpg",
+        "tags": [
+            "Classic",
+            "Barbershop",
+            "Short"
+        ],
+        "description": "A timeless barbershop-style cut with clean sides and a neatly combed top. Sophisticated and easy to maintain.",
+        "cutFrequency": "Every 3-4 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Clean tapered sides",
+                    "Neatly styled top",
+                    "Classic, distinguished look"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-male-2",
+        "title": "Silver Side Part",
+        "category": "senior-male",
+        "featureImage": "/images/salon/gc-home-clipNotes.png",
+        "tags": [
+            "Side Part",
+            "Silver",
+            "Polished"
+        ],
+        "description": "A sharp side part that celebrates silver and grey hair. Polished, confident, and always in style.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Defined side part",
+                    "Works beautifully with grey hair",
+                    "Professional and refined"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-male-3",
+        "title": "Short Textured Cut",
+        "category": "senior-male",
+        "featureImage": "/images/salon/gc-home-oci-woman-with-phone.png",
+        "tags": [
+            "Textured",
+            "Short",
+            "Easy"
+        ],
+        "description": "A low-maintenance short cut with subtle texture for a natural, relaxed look.",
+        "cutFrequency": "Every 4-5 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Short all-over length",
+                    "Light texture for dimension",
+                    "Minimal daily styling"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-female-1",
+        "title": "Style & Set",
+        "category": "senior-female",
+        "featureImage": "/images/salon/greatClips-home-seniors-ron.png",
+        "tags": [
+            "Styled",
+            "Set",
+            "Elegant"
+        ],
+        "description": "Expert styling that brings out your best look every time. A classic set that stays beautifully all day.",
+        "cutFrequency": "Every 4-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Professional blow-dry and set",
+                    "Long-lasting shape",
+                    "Elegant and polished finish"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-female-2",
+        "title": "Short Layered Bob",
+        "category": "senior-female",
+        "featureImage": "/images/salon/WHblog_gnV2.jpg",
+        "tags": [
+            "Bob",
+            "Layered",
+            "Short"
+        ],
+        "description": "A flattering layered bob that adds volume and frames the face beautifully. Perfect for fine or thinning hair.",
+        "cutFrequency": "Every 5-6 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Layered for lift and volume",
+                    "Face-framing shape",
+                    "Great for fine hair"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hs-senior-female-3",
+        "title": "Soft Silver Waves",
+        "category": "senior-female",
+        "featureImage": "/images/salon/gc-home-clipNotes.png",
+        "tags": [
+            "Waves",
+            "Silver",
+            "Soft"
+        ],
+        "description": "Gentle waves that celebrate natural silver or white hair. Soft, graceful, and effortlessly beautiful.",
+        "cutFrequency": "Every 6-8 weeks",
+        "sections": [
+            {
+                "type": "heading",
+                "content": "Style Details"
+            },
+            {
+                "type": "bullet",
+                "content": [
+                    "Soft wave pattern",
+                    "Enhances natural silver tones",
+                    "Elegant and low-maintenance"
+                ]
+            }
+        ]
+    }
+]
